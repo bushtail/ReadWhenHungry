@@ -25,32 +25,32 @@ namespace ReadWhenHungry
                 var settings = ReadWhenHungrySettings.options;
                 if (GameManager.GetWeatherComponent().IsTooDarkForAction(ActionsToBlock.Reading))
                 {
-                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooDarkToRead"), false);
+                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooDarkToRead"), false, true);
                     return true;
                 }
                 if (!settings.allowReadingWhenTired && GameManager.GetFatigueComponent().IsExhausted())
                 {
-                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooTiredToRead"), false);
+                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooTiredToRead"), false, true);
                     return true;
                 }
                 if (!settings.allowReadingWhenFreezing && GameManager.GetFreezingComponent().IsFreezing())
                 {
-                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooColdToRead"), false);
+                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooColdToRead"), false, true);
                     return true;
                 }
                 if (!settings.allowReadingWhenHungry && GameManager.GetHungerComponent().IsStarving())
                 {
-                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooHungryToRead"), false);
+                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooHungryToRead"), false, true);
                     return true;
                 }
                 if (!settings.allowReadingWhenThirsty && GameManager.GetThirstComponent().IsDehydrated())
                 {
-                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooThirstyToRead"), false);
+                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooThirstyToRead"), false, true);
                     return true;
                 }
                 if (!settings.allowReadingWhenWounded && GameManager.GetConditionComponent().GetNormalizedCondition() < 0.1f)
                 {
-                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooWoundedToRead"), false);
+                    HUDMessage.AddMessage(Localization.Get("GAMEPLAY_TooWoundedToRead"), false, true);
                     return true;
                 }
                 if (GameManager.GetConditionComponent().HasNonRiskAffliction())
@@ -68,7 +68,7 @@ namespace ReadWhenHungry
                         || (!settings.allowReadingWithSprainedAnkle && HasAffliction(AfflictionType.SprainedAnkle))
                         || (!settings.allowReadingWithSprainedWrist && HasAffliction(AfflictionType.SprainedWrist)))
                     {
-                        HUDMessage.AddMessage(Localization.Get("GAMEPLAY_CannotReadWithAfflictions"), false);
+                        HUDMessage.AddMessage(Localization.Get("GAMEPLAY_CannotReadWithAfflictions"), false, true);
                         return true;
                     }
                     return false;
