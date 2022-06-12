@@ -7,6 +7,7 @@ It allows the user to read when they might not be able to otherwise.
 ## Special Thanks
 
 [MikeyPdog](https://github.com/MikeyPdog) is the original creator of Read When Hungry. I am very grateful for all the contributions he made to the modding community.
+
 [ds5678](https://github.com/ds5678) is the prior maintainer of Read When Hungry. His continued contributions to the TLD modding community are greatly appreciated.
 
 ## Installation
