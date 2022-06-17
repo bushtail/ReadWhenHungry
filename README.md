@@ -1,4 +1,5 @@
-﻿# Read When Hungry
+# Read When Hungry
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N21JQB0)
 
 This is a mod for **The Long Dark** by Hinterland Studio, Inc.
 
